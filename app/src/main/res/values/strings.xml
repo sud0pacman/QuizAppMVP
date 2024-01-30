@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">QuizAppMVP</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+    <string name="matematika">Matematika</string>
+    <string name="tarix">Tarix</string>
+    <string name="geografiya">Geografiya</string>
+    <string name="categories">Categories</string>
+    <string name="fizika">Fizika</string>
+    <string name="your_score">Your Score</string>
+    <string name="kategoriyalar">Kategoriyalar</string>
+</resources>
