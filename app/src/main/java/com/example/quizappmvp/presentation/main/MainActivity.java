@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         btnFinish.setOnClickListener(v -> clickFinishButton());
 
         tvLevel = findViewById(R.id.tv_level);
-        tvLevel.setText("1/5");
+        tvLevel.setText("1/10");
     }
 
     @Override

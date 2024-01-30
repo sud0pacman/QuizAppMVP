@@ -36,6 +36,10 @@ public class CategoryActivity extends AppCompatActivity implements  CategoryCont
         findViewById(R.id.buttonMath).setOnClickListener(v -> {
             presenter.setSelectCategory(CategoryEnum.TARIX);
         });
+
+        findViewById(R.id.buttonProgramming).setOnClickListener(v -> {
+           presenter.setSelectCategory(CategoryEnum.DASTURLASH);
+        });
     }
 
     @Override

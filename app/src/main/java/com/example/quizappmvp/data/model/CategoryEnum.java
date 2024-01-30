@@ -1,5 +1,5 @@
 package com.example.quizappmvp.data.model;
 
 public enum CategoryEnum {
-    GEOGRAFIYA, TARIX, FIZIKA, MATEMATIKA
+    GEOGRAFIYA, TARIX, FIZIKA, MATEMATIKA, DASTURLASH
 }

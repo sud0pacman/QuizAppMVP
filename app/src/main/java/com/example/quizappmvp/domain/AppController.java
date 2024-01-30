@@ -92,6 +92,18 @@ public class AppController {
                 questions.add(new QuestionData("200 ning 20% nechaga teng ?", "10", "20", "30", "40", "40"));
                 break;
             }
+            case DASTURLASH: {
+                questions.add(new QuestionData("Java dasturlash tili asoschisi kim ?", "Guvido Van Rossum", "James Gosling", "Graydon Hoare", "Bjarne Stroustrup ", "James Gosling"));
+                questions.add(new QuestionData("Windows OT larda oxirgi amalni bekor qiluvchi qisqa tugma ?", "ctrl + l", "ctrl + shift + n", "ctrl + z", "ctrl + x", "ctrl + z"));
+                questions.add(new QuestionData("Dasturlashda o'zini qiymatini va o'zidan keyingi element manzilini saqlovchi ma'lumot turi nomi: ", "Array list", "Massiv", "Map", "Linked list", "Linked list"));
+                questions.add(new QuestionData("Bir obyektdan boshqa obyekt nusxs olinsa va ularning biri o'zgartirilsa ikkalasi ham o'zgarsa bu qanday nusxa olishga kiradi: ", "Deep", "Shallow", "Temp", "Simple", "Shallow"));
+                questions.add(new QuestionData("Java dasturlash tilida nechta primitive toifa bor: ", "6", "7", "8", "9", "8"));
+                questions.add(new QuestionData("Java dasturlash tilida char toifasi xotiradan necha byte joy oladi ?", "1 byte", "2 byte", "4 byte", "8 byte", "2 byte"));
+                questions.add(new QuestionData("Java dasturlash tilida primitive toifalar xotiraning qaysi qismidan joy oladi ?", "Heap", "Stack", "Metaspace", "Permgen", "Stack"));
+                questions.add(new QuestionData("Procedual dasturlash tilini toping ?", "Pascal", "Scala", "Java", "PHP", "Pascal"));
+                questions.add(new QuestionData("Kotlin dasturlash tilida 3ta teng nimani tekshiradi ?", "Qiymatni", "Reference ni", "Raqamlarni", "Stringlarni", "Reference ni"));
+                questions.add(new QuestionData("Bu yerda qaysi biri framework emas", "Kotlin", "Flask", "Python", "Django", "Python"));
+            }
         }
     }
 }
