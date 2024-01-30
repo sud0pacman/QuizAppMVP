@@ -28,7 +28,8 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:text="3/21"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:fontFamily="@font/uzum_extrabold"/>
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
