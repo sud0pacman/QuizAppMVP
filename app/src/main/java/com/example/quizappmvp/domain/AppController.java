@@ -49,7 +49,7 @@ public class AppController {
                 questions.add(new QuestionData("\"Geografiya” atamasining etimologik ma’nosi:", "yunoncha \"geo”-yer, \"grafio”-tasvirlayman", "lotincha \"geo”-yer, \"grafio”-chizaman", "arabcha \"geo”-yer, \"grafio”-tasvirlayman", "yunoncha \"geo”-yer, \"grafio”- o’qiyman", "yunoncha \"geo”-yer, \"grafio”-tasvirlayman"));
                 questions.add(new QuestionData("Dastlabki xarita qachon tuzilgan?", "13 asr muqaddam", "14 asr muqaddam", "15 asr muqaddam", "16 asr muqaddam", "15 asr muqaddam"));
                 questions.add(new QuestionData("\"Geografiya” atamasini birinchi bo’lib fanga kim kiritgan?", "Falas", "Pifagor", "Arastu", "Eratosfen", "Eratosfen"));
-                questions.add(new QuestionData("Dastlabki xarita qachon tuzilgan?", "13 asr muqaddam", "14 asr muqaddam", "15 asr muqaddam", "16 asr muqaddam", "15 asr muqaddam"));
+                questions.add(new QuestionData("Mariana botig'ining chuqurligi necha meter?", "1022M", "10022M", "10994M", "15200M", "10994M"));
                 questions.add(new QuestionData("Buyuk  geografik  kashfiyotlar boshlangan asr  to’g’ri  yozilgan  javobni toping?", "XV asrning o’rtalaridan", "XV asrning  boshlaridan", "XV asrning  oxiridan", "XVI asrning  boshlaridan", "XV asrning o’rtalaridan"));
                 break;
             }

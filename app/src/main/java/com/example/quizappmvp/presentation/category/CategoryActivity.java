@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import com.example.quizappmvp.R;
 import com.example.quizappmvp.data.model.CategoryEnum;
@@ -16,6 +17,10 @@ public class CategoryActivity extends AppCompatActivity implements  CategoryCont
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         presenter = new CategoryPresenter(this);
         initViews();
     }
