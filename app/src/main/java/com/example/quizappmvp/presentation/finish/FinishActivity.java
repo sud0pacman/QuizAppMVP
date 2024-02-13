@@ -5,6 +5,7 @@ import static android.content.Intent.getIntent;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,9 @@ public class FinishActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finsh);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         int trueAns = getIntent().getIntExtra("CORRECTS", 0);
         int wrongAns = getIntent().getIntExtra("WRONGS", 0);
