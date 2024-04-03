@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="green_background">#7ed501</color>
+    <color name="green_text">#63bc01</color>
+    <color name="red_background">#de3c63</color>
+    <color name="red_text">#ea3640</color>
+
+    <color name="blue_text">#49c0f8</color>
+
+    <color name="progress_bar">#ffa500</color>
+    <color name="progress_bar_inactive">#354650</color>
+
+    <color name="background">#131F24</color>
+    <color name="secondary_background">#4c656c</color>
+    <color name="gray_border">#354650</color>
+    <color name="dialog_background">#111e24</color>
+    <color name="selected_variant_background">#1a2f37</color>
+    <color name="card_background">#202F36</color>
+    <color name="divider_background">#354650</color>
+    <color name="next_dialog_background">#1a2f37</color>
+    <color name="card_select_border">#3F85A7</color>
+    <color name="blue_border">#00c2fc</color>
+    <color name="blue_out_background">#019bda</color>
+    <color name="blue_inner_background">#00c3fe</color>
+    <color name="green_out_background">#64bb00</color>
+    <color name="green_inner_background">#7ed501</color>
+    <color name="red_out_background">#ea3640</color>
+    <color name="red_inner_background">#ff444f</color>
+    <color name="orange_text">#ffc500</color>
+    <color name="text_color">#F1F7FB</color>
+    <color name="text_secondery_color">#4c656c</color>
+
+
 </resources>

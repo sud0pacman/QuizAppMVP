@@ -4,6 +4,7 @@ import static androidx.core.content.ContextCompat.startActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,11 @@ public class MainPresenter implements MainContract.Presenter {
         this.model = new MainModel();
         this.view = view;
 
+        Log.d("TTT", "MainPresenter");
+
+        view.levelUp(currentPos + 1, (currentPos + 1) * 10);
+        view.nextButtonSate(false);
+
         loadQuestionData();
         loadQuestionDataByPos();
     }
@@ -34,13 +40,15 @@ public class MainPresenter implements MainContract.Presenter {
     }
 
     private void loadQuestionDataByPos() {
+        Log.d("TTT", "loadQuestionDataByPos " + questionList.get(currentPos).toString());
         view.describeQuestion(questionList.get(currentPos));   // bu har bir savolni positsiya bo'yich aolib beradi
     }
 
     @Override
     public void selectAnswer(int pos) {
         if (pos == this.selectIndex) return;
-        if (selectIndex > -1) view.clearOldState(selectIndex); // agar variant birinchi marta tanlanmayotgan bo'lsa uncheck image qo'yiladi
+        if (selectIndex > -1)
+            view.clearOldState(selectIndex); // agar variant birinchi marta tanlanmayotgan bo'lsa uncheck image qo'yiladi
         selectIndex = pos;
         view.showSelectIndex(pos);  // belgilangan variantni image bilan belgilab qo'yish
         view.nextButtonSate(true);
@@ -62,16 +70,26 @@ public class MainPresenter implements MainContract.Presenter {
         if (currentPos >= questionList.size()) {
             view.showResult(correctCount, wrongCount);
             view.clickFinishButton();
+        } else {
+            view.describeQuestion(questionList.get(currentPos));
+            selectIndex = -1;
+            view.levelUp(currentPos + 1, (currentPos + 1) * 10);
         }
-        else view.describeQuestion(questionList.get(currentPos));
-        selectIndex = -1;
-
-        view.levelUp(currentPos+1);
     }
 
     @Override
     public void clickFinishButton() {
         view.openFinishActivity(correctCount, wrongCount);
+    }
+
+    @Override
+    public void clickCheckButton() {
+        if (currentPos >= questionList.size()) return;
+        QuestionData currQuestion = questionList.get(currentPos);
+
+        boolean isCorrect = currQuestion.getAnswer().equals(currQuestion.getVariants()[selectIndex]);
+
+        view.showNextDialog(isCorrect, currQuestion.getAnswer());
     }
 }
 

@@ -1,5 +1,9 @@
 package com.example.quizappmvp.data.model;
 
+import androidx.annotation.NonNull;
+
+import java.util.Arrays;
+
 public class QuestionData {
     private String question;
     private String[] variants;
@@ -26,5 +30,16 @@ public class QuestionData {
 
     public String getAnswer() {
         return answer;
+    }
+
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "QuestionData{" +
+                "question='" + question + '\'' +
+                ", variants=" + Arrays.toString(variants) +
+                ", answer='" + answer + '\'' +
+                '}';
     }
 }

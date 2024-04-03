@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="CategoryImageStyle">
         <item name="android:layout_width">50dp</item>
@@ -11,24 +11,85 @@
     <style name="CategoryTextStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">24sp</item>
-        <item name="android:textColor">#7777EC</item>
-        <item name="android:fontFamily">@font/uzum_extrabold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:fontFamily">@font/din_next_for_duolingo_bold</item>
     </style>
 
     <style name="variant_container">
-        <item name="android:background">#e8fdfe</item>
+        <item name="android:background">@drawable/bg_inner_variant</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
-        <item name="android:paddingHorizontal">16dp</item>
-        <item name="android:paddingVertical">12dp</item>
+        <item name="android:paddingHorizontal" tools:ignore="NewApi">16dp</item>
+        <item name="android:paddingVertical" tools:targetApi="o">12dp</item>
         <item name="android:focusable">true</item>
     </style>
 
     <style name="variant_text">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:fontFamily">@font/uzum_medium</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fontFamily">@font/din_next_for_duolingo_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:gravity">start|center</item>
     </style>
+
+
+    <style name="Theme.QuizApp" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondaryContainer">@color/white</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.Material3.ActionBar.Title</item>
+        <item name="materialAlertDialogTheme">@style/AlertDialog</item>
+    </style>
+
+    <style name="AlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog.Centered">
+        <item name="colorPrimary">@color/card_background</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:background">@color/card_background</item>
+        <item name="android:gravity">center</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <style name="TransparentDialog" parent="@android:style/Theme.Holo.Light.Dialog.MinWidth">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textStyle">normal</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="TestCard">
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardElevation">5dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+
 </resources>

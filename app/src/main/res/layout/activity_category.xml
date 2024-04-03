@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg2"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".presentation.category.CategoryActivity">
 
@@ -17,17 +17,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/like3"
+            android:fontFamily="@font/din_regular"
             android:text="@string/kategoriyalar"
-            android:textColor="#B433DA"
-            android:textSize="42sp" />
+            android:textColor="@color/green_text"
+            android:textSize="36sp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="6">
+        android:layout_weight="4">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,15 +41,15 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginVertical="8dp"
-                app:cardCornerRadius="10dp">
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="6dp"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:id="@+id/buttonGeography"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#c4fdfc"
                     android:gravity="center_vertical"
                     android:foreground="?android:selectableItemBackgroundBorderless"
                     android:padding="8dp">
@@ -68,15 +69,16 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginVertical="8dp"
-                app:cardCornerRadius="10dp">
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="6dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/card_background"
+                >
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/buttonHistory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#c4fdfc"
                     android:gravity="center_vertical"
                     android:foreground="?android:selectableItemBackgroundBorderless"
                     android:padding="8dp">
@@ -96,15 +98,15 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginVertical="8dp"
-                app:cardCornerRadius="10dp">
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="6dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/card_background">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/buttonProgramming"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#c4fdfc"
                     android:gravity="center_vertical"
                     android:foreground="?android:selectableItemBackgroundBorderless"
                     android:padding="8dp">
@@ -123,15 +125,15 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginVertical="8dp"
-                app:cardCornerRadius="10dp">
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="6dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/card_background">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/buttonPhysics"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#c4fdfc"
                     android:gravity="center_vertical"
                     android:padding="8dp"
                     android:foreground="?android:selectableItemBackgroundBorderless">
@@ -151,15 +153,15 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginVertical="8dp"
-                app:cardCornerRadius="10dp">
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="6dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/card_background">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/buttonMath"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#c4fdfc"
                     android:gravity="center_vertical"
                     android:foreground="?android:selectableItemBackgroundBorderless"
                     android:padding="8dp">

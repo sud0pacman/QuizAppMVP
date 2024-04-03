@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg2"
+    android:background="@color/background"
     tools:context=".presentation.finish.FinishActivity"
     android:orientation="vertical">
 
@@ -14,62 +14,15 @@
         android:layout_weight="1"
         android:gravity="center">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="10dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="Natija"
-                    android:textColor="#2884EA"
-                    android:textSize="24sp"
-                    android:gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/uzum_bold"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tv_corrects"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        tools:text="To'g'rilar: 28"
-                        android:textColor="#239E2F"
-                        android:textSize="16sp"
-                        android:gravity="center"
-                        android:fontFamily="@font/uzum_medium"
-                        />
-
-                    <TextView
-                        android:id="@+id/tv_wrongs"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        tools:text="Noto'g'rilar: 28"
-                        android:textColor="#CC2525"
-                        android:textSize="16sp"
-                        android:gravity="center"
-                        android:fontFamily="@font/uzum_medium"
-                        />
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            tools:ignore="MissingConstraints"
+            android:layout_margin="56dp"/>
 
     </LinearLayout>
 
@@ -78,33 +31,203 @@
         android:id="@+id/view_bottom"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:paddingTop="16dp">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ic_back"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:src="@drawable/ic_back"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.2"
+        <TextView
+            android:id="@+id/finish_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:fontFamily="@font/din_next_for_duolingo_bold"
+            android:textColor="@color/orange_text"
+            android:text="@string/task_end"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/container_band"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_overall_band"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btn_home"
+            app:layout_constraintEnd_toStartOf="@id/container_time"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/view_bottom"
-            app:layout_constraintVertical_bias="0.75" />
+            app:layout_constraintTop_toBottomOf="@id/finish_title"
+            app:layout_constraintVertical_bias="0.2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp"
+                android:fontFamily="@font/din_next_for_duolingo_bold"
+                android:gravity="center"
+                android:text="@string/overall"
+                android:textColor="@color/background"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/bg_result_inner_background"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_flash" />
+
+                <TextView
+                    android:id="@+id/tv_band"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:fontFamily="@font/din_next_for_duolingo_bold"
+                    android:text="13"
+                    android:textColor="#ffc500"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ic_reload"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:src="@drawable/ic_restart"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <LinearLayout
+            android:id="@+id/container_time"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_overall_time"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btn_home"
+            app:layout_constraintEnd_toStartOf="@id/container_percentage"
+            app:layout_constraintStart_toEndOf="@id/container_band"
+            app:layout_constraintTop_toBottomOf="@id/finish_title"
+            app:layout_constraintVertical_bias="0.2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp"
+                android:fontFamily="@font/din_next_for_duolingo_bold"
+                android:gravity="center"
+                android:text="@string/time"
+                android:textColor="@color/background"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/bg_result_inner_background"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_timer" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:fontFamily="@font/din_next_for_duolingo_bold"
+                    android:text="5:18"
+                    android:textColor="#00c3fe"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/container_percentage"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_overall_percentage"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btn_home"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.8"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/view_bottom"
-            app:layout_constraintVertical_bias="0.75" />
+            app:layout_constraintStart_toEndOf="@id/container_time"
+            app:layout_constraintTop_toBottomOf="@id/finish_title"
+            app:layout_constraintVertical_bias="0.2">
+
+            <TextView
+                android:id="@+id/tv_degree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp"
+                android:fontFamily="@font/din_next_for_duolingo_bold"
+                android:gravity="center"
+                android:text="@string/great"
+                android:textAllCaps="true"
+                android:textColor="@color/background"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/bg_result_inner_background"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_accuracy" />
+
+                <TextView
+                    android:id="@+id/tv_accuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:fontFamily="@font/din_next_for_duolingo_bold"
+                    android:text="%88"
+                    android:textColor="#7fd600"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/btn_home"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/blue_out"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/btn_check_inner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/blue_inner"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp"
+                android:textColor="#102026"
+                android:text="@string/home"
+                android:textAllCaps="true"
+                android:fontFamily="@font/din_bold"
+                android:textSize="16sp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </LinearLayout>

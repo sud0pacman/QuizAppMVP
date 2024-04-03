@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">QuizAppMVP</string>
-    <string name="next">Next</string>
-    <string name="finish">Finish</string>
+    <string name="next">Keyingisi</string>
+    <string name="finish">TUGATISH</string>
     <string name="matematika">Matematika</string>
     <string name="tarix">Tarix</string>
     <string name="geografiya">Geografiya</string>
@@ -10,4 +10,14 @@
     <string name="your_score">Your Score</string>
     <string name="kategoriyalar">Kategoriyalar</string>
     <string name="programming">Dasturlash</string>
+    <string name="check">TEKSHIRISH</string>
+    <string name="home">Bosh menyu</string>
+    <string name="davom_etish">Davom etish</string>
+    <string name="ajoyib">Ajoyib!</string>
+    <string name="javob">Javob:</string>
+    <string name="adashdingiz">Adashdingiz</string>
+    <string name="overall">JAMI BALL</string>
+    <string name="time">VAQT</string>
+    <string name="great">Yaxshi</string>
+    <string name="task_end">Topshiriq tugadi!</string>
 </resources>

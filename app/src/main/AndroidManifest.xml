@@ -15,6 +15,7 @@
         <activity
             android:name=".presentation.finish.FinishActivity"
             android:exported="false" />
+
         <activity
             android:name=".presentation.category.CategoryActivity"
             android:exported="true">

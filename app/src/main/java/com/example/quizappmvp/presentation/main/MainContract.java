@@ -14,17 +14,18 @@ public interface MainContract {
         void showSelectIndex(int pos);
         void clearOldState(int pos);
         void nextButtonSate(boolean bool);
-        void clickNextButton();
         void clickFinishButton();
         void openFinishActivity(int correctCount, int wrongCount);
         void showResult(int correctCount, int wrongCount);
-        void levelUp(int currentPos);
+        void levelUp(int currentPos, int progress);
 
+        void showNextDialog(boolean isCorrect, String trueAnswer);
     }
 
     interface Presenter {
         void selectAnswer(int pos);
         void clickNextButton();
         void clickFinishButton();
+        void clickCheckButton();
     }
 }

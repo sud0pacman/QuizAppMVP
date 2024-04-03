@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/next_dialog_background"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="6dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_correct"
+            android:padding="16dp"
+            android:layout_marginHorizontal="12dp"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/ajoyib"
+            android:gravity="center|start"
+            android:textColor="@color/green_text"
+            android:textSize="24sp"
+            android:fontFamily="@font/din_next_for_duolingo_bold"
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/green_out"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btn_check_inner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/green_inner"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:textColor="#102026"
+            android:text="@string/next"
+            android:fontFamily="@font/din_bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

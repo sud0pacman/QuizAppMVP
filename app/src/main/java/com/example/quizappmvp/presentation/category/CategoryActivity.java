@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.WindowManager;
 
 import com.example.quizappmvp.R;
 import com.example.quizappmvp.data.model.CategoryEnum;
 import com.example.quizappmvp.presentation.main.MainActivity;
+import com.example.quizappmvp.utils.StatusBarUtil;
 
 public class CategoryActivity extends AppCompatActivity implements  CategoryContract.View{
     private CategoryContract.Presenter presenter;
@@ -18,8 +20,7 @@ public class CategoryActivity extends AppCompatActivity implements  CategoryCont
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        StatusBarUtil.makeStatusBarTransparent(this);
 
         presenter = new CategoryPresenter(this);
         initViews();
@@ -49,6 +50,7 @@ public class CategoryActivity extends AppCompatActivity implements  CategoryCont
 
     @Override
     public void openQuestionActivity() {
+
         Intent intent = new Intent(CategoryActivity.this, MainActivity.class);
         startActivity(intent);
     }
