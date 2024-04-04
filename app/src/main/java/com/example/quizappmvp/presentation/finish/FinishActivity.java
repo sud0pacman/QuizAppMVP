@@ -64,7 +64,7 @@ public class FinishActivity extends AppCompatActivity {
         TextView degree = findViewById(R.id.tv_degree);
 
         if (accuracy <= 50) {
-            degree.setText("Yomon");
+            degree.setText("Aniqlik");
         }
         else if (accuracy <= 70) degree.setText("Yaxshi");
         else degree.setText("Mukammal");
