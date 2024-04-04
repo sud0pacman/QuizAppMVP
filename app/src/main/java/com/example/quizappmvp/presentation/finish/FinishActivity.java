@@ -52,12 +52,14 @@ public class FinishActivity extends AppCompatActivity {
         bandTv.setText(""+trueAns);
 
         TextView timeTv = findViewById(R.id.tv_time);
-        timeTv.setText(minutes + ":"+seconds);
+
+        if (seconds > 9) timeTv.setText(minutes + ":"+seconds);
+        else timeTv.setText(minutes + ":"+"0"+seconds);
 
 
         TextView accuracyTv = findViewById(R.id.tv_accuracy);
         float accuracy = ((trueAns + wrongAns) * 0.01f) * trueAns;
-        accuracyTv.setText("" + ((int) accuracy));
+        accuracyTv.setText("%" + ((int) accuracy));
 
         TextView degree = findViewById(R.id.tv_degree);
 

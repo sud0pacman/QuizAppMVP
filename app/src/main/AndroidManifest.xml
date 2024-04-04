@@ -12,13 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizAppMVP"
         tools:targetApi="31">
+
         <activity
             android:name=".presentation.finish.FinishActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
 
         <activity
             android:name=".presentation.category.CategoryActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +32,8 @@
 
         <activity
             android:name=".presentation.main.MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

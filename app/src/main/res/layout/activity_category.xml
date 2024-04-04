@@ -41,7 +41,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="24dp"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="6dp"
                 app:cardBackgroundColor="@color/card_background"
                 app:cardCornerRadius="12dp">
@@ -69,7 +69,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="24dp"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="6dp"
                 app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/card_background"
@@ -98,7 +98,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="24dp"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="6dp"
                 app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/card_background">
@@ -125,7 +125,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="24dp"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="6dp"
                 app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/card_background">
@@ -153,7 +153,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="24dp"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="6dp"
                 app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/card_background">
