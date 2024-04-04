@@ -148,8 +148,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         if (bool) {
             btnNextInner.setBackgroundResource(R.drawable.blue_inner);
             btnNext.setBackgroundResource(R.drawable.blue_out);
-        }
-        else {
+        } else {
             btnNextInner.setBackgroundResource(R.drawable.bg_next_false_state);
             btnNext.setBackgroundResource(R.drawable.bg_next_false_state);
         }
@@ -184,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     @Override
     public void levelUp(int level, int progress) {
         progressBar.setProgress(progress);
-        tvLevel.setText(""+level);
+        tvLevel.setText("" + level);
     }
 
 
@@ -215,8 +214,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
         if (isCorrect) {
             nextDialog.setContentView(R.layout.dialog_next_green);
-        }
-        else {
+        } else {
             nextDialog.setContentView(R.layout.dialog_next_red);
 
             TextView answer = Objects.requireNonNull(nextDialog.getWindow()).findViewById(R.id.trueAnswerTv);
@@ -231,7 +229,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         nextDialog.setCancelable(false);
 
 
-        nextDialog.getWindow().findViewById(R.id.btn_next).setOnClickListener( v -> {
+        nextDialog.getWindow().findViewById(R.id.btn_next).setOnClickListener(v -> {
             presenter.clickNextButton();
             nextDialog.cancel();
         });
@@ -242,6 +240,10 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+
+        // To execute back press
+        // super.onBackPressed()
+
+        // To do something else
     }
 }
