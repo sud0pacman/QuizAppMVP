@@ -59,9 +59,6 @@ public class MainPresenter implements MainContract.Presenter {
         if (currentPos >= questionList.size()) return;
         QuestionData currQuestion = questionList.get(currentPos);
 
-        if (currQuestion.getAnswer().equals(currQuestion.getVariants()[selectIndex])) {
-            ++correctCount;
-        } else ++wrongCount;
 
         view.clearOldState(selectIndex);
         view.nextButtonSate(false);
@@ -87,7 +84,15 @@ public class MainPresenter implements MainContract.Presenter {
         if (currentPos >= questionList.size()) return;
         QuestionData currQuestion = questionList.get(currentPos);
 
+
+
         boolean isCorrect = currQuestion.getAnswer().equals(currQuestion.getVariants()[selectIndex]);
+
+
+        if (isCorrect) {
+            ++correctCount;
+        } else ++wrongCount;
+
 
         view.showNextDialog(isCorrect, currQuestion.getAnswer());
     }

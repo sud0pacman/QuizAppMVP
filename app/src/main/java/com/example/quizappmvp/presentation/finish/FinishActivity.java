@@ -41,7 +41,7 @@ public class FinishActivity extends AppCompatActivity {
         long minutes = (time / (1000 * 60)) % 60;
 
 
-        Log.d("TTT", "" + time);
+        Log.d("TTT", "true ans" + trueAns + "false ans" + wrongAns);
 
         LottieAnimationView lottieAnimationView = findViewById(R.id.animationView);
         lottieAnimationView.setAnimation("win.json");
@@ -58,7 +58,7 @@ public class FinishActivity extends AppCompatActivity {
 
 
         TextView accuracyTv = findViewById(R.id.tv_accuracy);
-        float accuracy = ((trueAns + wrongAns) * 0.01f) * trueAns;
+        float accuracy = trueAns / ((trueAns + wrongAns) * 0.01f);
         accuracyTv.setText("%" + ((int) accuracy));
 
         TextView degree = findViewById(R.id.tv_degree);
@@ -68,6 +68,8 @@ public class FinishActivity extends AppCompatActivity {
         }
         else if (accuracy <= 70) degree.setText("Yaxshi");
         else degree.setText("Mukammal");
+
+
 
         LinearLayout backButton = findViewById(R.id.btn_home);
 
